@@ -98,8 +98,8 @@ df2$sexe <-
   fct_recode(df2$sexe,"Homme"="0","Femme"="1")
 
 #fonction de stat agregee
-fonction_de_stat_agregee<-function(a,b="moyenne",...){
-  checkvalue=F
+fonction_de_stat_agregee <- function(a, b = "moyenne", ...) {
+  checkvalue = F
   for (x in c("moyenne","variance","ecart-type","sd")){checkvalue<-(checkvalue | b==x)}
   if (checkvalue == FALSE) stop("statistique non supportée")
   
